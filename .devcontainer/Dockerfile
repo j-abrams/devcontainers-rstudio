@@ -65,6 +65,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         markdown \ 
         ottr \
         dplyr \
+        shiny \
     && rm -rf /tmp/downloaded_packages
 
 ## Install summarytools and load some R package off the bat
@@ -73,6 +74,7 @@ RUN R -e "library(ottr)"
 RUN R -e "library(here)"
 RUN R -e "library(languageserver)"
 RUN R -e "library(dplyr)"
+RUN R -e "library(shiny)"
 # RUN installGithub.r ucbds-infra/ottr@stable
 
 
